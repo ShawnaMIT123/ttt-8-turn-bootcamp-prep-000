@@ -11,8 +11,11 @@ def input_to_index(input)
 end
 
 def valid_move?(array, index)
-  if index.between?
-  
+  if index.between?(0,8) && array[index] == " "
+    return true
+    else
+      return false
+  end
 end
 
 def move(array, index, character = "X")
