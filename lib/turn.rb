@@ -10,7 +10,8 @@ def input_to_index(input)
   index = input.to_i - 1
 end
 
-def valid_move?(array, input)
+def valid_move?(array, index)
+  if index.between?
   
 end
 
@@ -20,4 +21,6 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
+  num = gets.stripe
+  
 end
