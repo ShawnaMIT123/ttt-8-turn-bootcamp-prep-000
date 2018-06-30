@@ -10,8 +10,8 @@ def input_to_index(input)
   index = input.to_i - 1
 end
 
-def valid_move?(array, input)
-  if input.between?(0,8) && array[input_to_index(input)] == " "
+def valid_move?(array, index)
+  if index.between?(0,8) && array[index] == " "
     return true
     else
       return false
@@ -25,8 +25,9 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   num = gets.stripe
-  if valid_move?(board, num)
-    move(board, input_to_index(num), "X")
+  index = input_to_index(num)
+  if valid_move?(board, index)
+    move(board, index, "X")
   else
      puts "Please enter 1-9:"
   end
